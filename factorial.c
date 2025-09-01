@@ -1,22 +1,20 @@
 #include <stdio.h>
 
-int main () {
+int main() {
+    int n, temp;
+    int result = 1;  // accumulator
 
-	int n,temp;
-	int resultado = 1;
+    printf("Enter a number: ");
+    scanf("%d", &n);
 
-	printf("Digite um número maior que 1 para calcularmos o seu fatorial: ");
-	scanf("%d",&n);
+    temp = n;  
 
-	temp = n;
+    while(temp > 1) {
+        result *= temp;  // multiply the accumulator
+        temp--;          // decrement until 1
+    }
 
-	while (temp > 1) {
+    printf("The factorial of %d is %d\n", n, result);
 
-		resultado *= temp;
-		temp--;
-		}
-
-	printf("O fatorial de %d é: %d\n", n, resultado);
-
-	return 0;
-	}
+    return 0;
+}
